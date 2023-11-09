@@ -42,7 +42,7 @@
                         </li>
                         <li class="nav-item" style="margin-left: 30px">
                             <h5>
-                                <a class="nav-link" aria-current="page" href="#">Peminjaman</a>
+                                <a class="nav-link" aria-current="page" href="{{ route('admin.peminjaman') }}">Peminjaman</a>
                             </h5>
                         </li>
                     </ul>

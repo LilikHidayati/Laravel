@@ -17,7 +17,7 @@
     }
 
     .adminbck {
-        background-color: #343434;
+        background-color: #5b66a4;
     }
 
     .sidebar {
@@ -26,7 +26,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #333;
+        background-color: #5b66a4;
         padding-top: 20px;
     }
 

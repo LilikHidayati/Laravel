@@ -17,7 +17,7 @@
     }
 
     .adminbck {
-        background-color: #343434;
+        background-color: #5b66a4;
     }
 
     .sidebar {
@@ -26,7 +26,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #333;
+        background-color: #5b66a4;
         padding-top: 20px;
     }
 
@@ -82,7 +82,7 @@
             <div class="col d-flex justify-content-center">
                 <div class="card mt-4" style="width: 800px">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Update Berita</h5>
+                        <h5 class="card-title text-center">Update Aktivitas Mahasiswa</h5>
                         <form action="/postEditAktivitas/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group mt-1">

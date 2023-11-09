@@ -4,21 +4,60 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <title>Homepage</title>
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #5b66a4;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+        </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-primary">
+    <!-- <nav class="navbar navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="/">Politeknik Negeri Bengkalis
                 | D-IV Rakayasa Perangkat Lunak</a>
+                
         </div>
-    </nav>
+    </nav> -->
+
+
+
+    <div class="navbar">
+        <a href="{{ route('user.home') }}">Buku</a>
+        <a href="{{ route('user.lihatberita') }}">Berita</a>
+        <a href="{{ route('user.lihatlulusan') }}">Lulusan</a>
+        
+    </div>
+
     <div class="container">
         <div class="row mt-3">
             <div class="col">
-                <h4 class="text-secondary">Selamat Datang {{ Auth::user()->name }}</h4>
+                <h4 class="text-secondary">Hallo Selamat Datang {{ Auth::user()->name }}</h4>
             </div>
             <div class="col"></div>
+            
             <div class="col-1"><a href="{{ route('logout') }}" style="text-decoration: none">
                     <p class="text-end text-black fw-semibold">Logout</p>
                 </a></div>

@@ -17,7 +17,7 @@
     }
 
     .adminbck {
-        background-color: #343434;
+        background-color: #5b66a4;
     }
 
     .sidebar {
@@ -26,7 +26,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #333;
+        background-color: #5b66a4;
         padding-top: 20px;
     }
 
@@ -84,7 +84,7 @@
                 <form action="{{ route('admin.lulusan') }}" method="GET">
                     @csrf
                     <div class="input-group">
-                        <input type="search" name="search" class="form-control rounded" placeholder="Cari judul berita"
+                        <input type="search" name="search" class="form-control rounded" placeholder="Cari data lulusan"
                             aria-label="Search" aria-describedby="search-addon" />
                         <button type="submit" class="btn btn-outline-primary">search</button>
                     </div>

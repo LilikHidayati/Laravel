@@ -93,8 +93,14 @@ Route::post('/postEditPeminjaman/{id}', [AdminController::class, 'postEditPeminj
 Route::post('/postTambahBuku', [AdminController::class, 'postTambahBuku'])->name('postTambahBuku');
 Route::post('/postEditBuku/{id}', [AdminController::class, 'postEditBuku'])->name('postEditBuku');
 
+
+
+// user
 Route::group(['middleware' => ['auth', 'checklevel:user']], function () {
     Route::get('user/home', [LoginRegisterController::class, 'userHome'])->name('user.home');
+
+    Route::get('user/lihatberita', [AdminController::class, 'userBerita'])->name('user.lihatberita');
+    Route::get('user/lihatlulusan', [AdminController::class, 'userLulusan'])->name('user.lihatlulusan');
 
     Route::get('/berita', [HomeController::class, 'berita'])->name('berita');
     Route::get('/profile_lulusan', [HomeController::class, 'profile_lulusan'])->name('profile_lulusan');

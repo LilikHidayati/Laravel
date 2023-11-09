@@ -233,6 +233,14 @@ class AdminController extends Controller
             return back()->with('failed', 'Data gagal ditambahkan!');
         }
     }
+    public function userBerita(Request $request)
+    {
+        $search = $request->input('search');
+        $data = Berita::where(function ($query) use ($search) {
+                $query->where('judul', 'LIKE', '%' . $search . '%');
+            })->paginate(5);
+        return view('user.lihatberita', compact('data'));
+    }
 
     public function editBerita($id)
     {
@@ -610,6 +618,15 @@ class AdminController extends Controller
         })->paginate(5);
 
         return view('admin.Lulusan', compact('data'));
+    }
+    public function userLulusan(Request $request)
+    {
+        $search = $request->input('search');
+        $data = Lulusan::where(function ($query) use ($search) {
+            $query->where('nama', 'LIKE', '%' . $search . '%');
+        })->paginate(5);
+
+        return view('user.lihatlulusan', compact('data'));
     }
 
     public function tambahLulusan()
